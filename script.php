@@ -34,6 +34,8 @@
         }
     }
 
+    #----------Login ----------------
+
     if(isset($_POST['login'])){
         $regNum = mysqli_real_escape_string($connect, $_POST['regNum']);
         $password = mysqli_real_escape_string($connect, $_POST['password']);
@@ -44,21 +46,39 @@
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result);
             $role = $row['role'];
+            $username = $row['name'];
             if($role == 'admin'){
-                #$_SESSION['name']=$name;
+                $_SESSION['name']=$username;
+                $_SESSION['regNum']=$regNum;
                 header('location:admin.php');
                 exit();
             } elseif ($role == 'warden'){
-                #$_SESSION['name']=$name;
+                $_SESSION['name']=$username;
+                $_SESSION['regNum']=$regNum;
                 header('location:warden.php');
                 exit();
             } else {
-                $_SESSION['name']=$name;
+                $_SESSION['name']=$username;
+                $_SESSION['regNum']=$regNum;
                 header('location:home.php');
                 exit();
             }
         } else {
             echo 'Failed to login' . mysqli_error($connect);
+        }
+    }
+
+    #-------- complain ----------
+    if(isset($_POST['complain'])){
+        $name = mysqli_real_escape_string($connect, $_POST['name']);
+        $regNum = mysqli_real_escape_string($connect, $_POST['regNum']);
+        $message = mysqli_real_escape_string($connect, $_POST['message']);
+
+        $sql="INSERT INTO complain(name,regNum,message) VALUES('$name','$regNum','$message')";
+        $result = mysqli_query($connect, $sql);
+
+        if($result){
+            header('location:home.php');
         }
     }
 ?>
