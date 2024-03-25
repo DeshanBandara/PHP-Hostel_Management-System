@@ -8,25 +8,39 @@
         <div class="col-md-6 offset-md-3">
         <a href='./login.php' class='backBtn btn btn-primary'>⬅️ Back</a>
         <h2>Registration</h2>
-            <form>
+            <form action="./script.php" method="post">
                 <div class='form-group'>
                     <label for='name'>Full Name</label>
                     <input type='text' class='form-control' placeholder='Enter Full Name' autoComplete='off' name='name'>
                 </div>
 
                 <div class='form-group'>
-                    <label for='email'>Email</label>
-                    <input type='text' class='form-control' placeholder='Enter Email' autoComplete='off' name='email'>
-                </div>
-
-                <div class='form-group'>
                     <label for='reg num'>Registration Number</label>
-                    <input type='text' class='form-control' placeholder='Student registration number' autoComplete='off' name='reg_num'>
+                    <input type='text' class='form-control' placeholder='Student registration number' autoComplete='off' name='regNum'>
+                </div>
+                <div class='form-group'>
+                    <label for='password'>Password</label>
+                    <input type='password' class='form-control' placeholder='Enter Password' autoComplete='off' name='password'>
                 </div>
 
                 <div class='form-group'>
+                    <label for='Confirm_password'>Confirm Password</label>
+                    <input type='password' class='form-control' placeholder='Confirm Password' autoComplete='off' name='confirmPassword'>
+                </div>
+
+                <button class='loginBtn btn btn-primary' type='submit' name='register'>Register</button><br/>
+
+                <div>
+                    <a class='regBtn btn btn-secondary' href='./login.php'>Login</a>
+                    <p class='formPara'>If you Already sign in please goto login</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--<div class='form-group'>
                     <label for='address'>Address</label>
-                    <input type='text' class='form-control' placeholder='Address' autoComplete='off' name='addresss'>
+                    <input type='text' class='form-control' placeholder='Address' autoComplete='off' name='address'>
                 </div>
 
                 <div class='form-group'>
@@ -51,29 +65,9 @@
 
                 <div class='form-group'>
                     Select your gender
-                    <select name="gender" id="Select">
+                    <select name="gender" id="gender">
                         <option value="1">Male</option>
                         <option value="1">Female</option>
                         <option value="1">None</option>
                     </select>
-                </div>
-
-                <div class='form-group'>
-                    <label for='password'>Password</label>
-                    <input type='password' class='form-control' placeholder='Enter Password' autoComplete='off' name='password'>
-                </div>
-
-                <div class='form-group'>
-                    <label for='Confirm_password'>Confirm Password</label>
-                    <input type='password' class='form-control' placeholder='Confirm Password' autoComplete='off' name='Confirm_password'>
-                </div>
-
-                <button class='loginBtn btn btn-primary' type='submit'>Register</button><br/>
-                <div>
-                    <a class='regBtn btn btn-secondary' href='./login.php'>Login</a>
-                    <p class='formPara'>If you Already sign in please goto login</p>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+                </div>-->
