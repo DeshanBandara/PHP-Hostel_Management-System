@@ -21,7 +21,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
@@ -33,7 +32,7 @@
             <a class="nav-link" href="#">Contact Us</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="./login.php">Login</a>
+            <a class="btn btn-success" href="./login.php">Login</a>
             </li>
         </ul>
         </div>
