@@ -17,6 +17,11 @@
         </div>
 
         <div class='form-group'>
+          <label for='Room number'>Room ID</label>
+          <input type='text' class='form-control' value="<?php echo $_SESSION['roomNum']; ?>" autoComplete='off' name='regNum'>
+        </div>
+
+        <div class='form-group'>
           <label for='Complain'>Registration number</label>
           <textarea class='form-control' cols="30" rows="10" name="message"></textarea>
         </div>

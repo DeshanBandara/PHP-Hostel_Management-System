@@ -18,6 +18,12 @@
                     <label for='reg num'>Registration Number</label>
                     <input type='text' class='form-control' placeholder='Student registration number' autoComplete='off' name='regNum'>
                 </div>
+
+                <div class='form-group'>
+                    <label for='room num'>Room Number</label>
+                    <input type='text' class='form-control' placeholder='Student room number' autoComplete='off' name='roomNum'>
+                </div>
+
                 <div class='form-group'>
                     <label for='password'>Password</label>
                     <input type='password' class='form-control' placeholder='Enter Password' autoComplete='off' name='password'>
